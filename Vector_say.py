@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Hello World
+""" Vector_say.py
 
-Make Vector say 'Hello World' in this simple Vector SDK example program.
+Make Vector say whatever you type into the input line.
 """
 
 import anki_vector
@@ -30,7 +30,7 @@ def main():
     with anki_vector.Robot(args.serial) as robot:
 
         print
-        sayThis = input("What would you like me to say? : ")
+        sayThis = input("What would you like Vector to say? : ")
 
         print("Saying '%s'" % sayThis)
         robot.say_text(sayThis)
