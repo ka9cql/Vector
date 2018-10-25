@@ -1,0 +1,10 @@
+#!/bin/sh
+##################################
+# saytime - Have Vector speak the time out loud.
+#
+# HISTORICAL INFORMATION -
+#
+#  2018-10-24  msipin  Adapted from 2017-07-02 version of Cozmo script
+##################################
+
+`python3 time2words.py -m | tail -1 | sed "s/ AM/ ay em/" | awk '{ printf "python3 Vector_say.py \"The time is , %s\"\n",$0}'`

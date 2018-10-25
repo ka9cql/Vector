@@ -26,11 +26,24 @@ import time
 
 
 def main():
-    args = anki_vector.util.parse_command_args()
-    with anki_vector.Robot(args.serial) as robot:
+    # args = anki_vector.util.parse_command_args()
+    # with anki_vector.Robot(args.serial) as robot:
+    with anki_vector.Robot() as robot:
 
-        print
-        sayThis = input("What would you like Vector to say? : ")
+        foundIt=0
+        sayThis = ""
+
+        if len(sys.argv)>1:
+            for x in sys.argv:
+                if (str.endswith(x,"Vector_say.py")):
+                    foundIt = 1
+                    continue
+                if (foundIt == 1):
+                    sayThis += " "
+                    sayThis += x
+        else:
+            print
+            sayThis = input("What would you like Vector to say? : ")
 
         print("Saying '%s'" % sayThis)
         robot.say_text(sayThis)
