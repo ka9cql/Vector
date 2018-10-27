@@ -34,15 +34,17 @@ import sys
 # DEAD -        Current battery voltage: 3.43194580078125
 
 # Presumed "linear" region -
-FULL_BATT = 4.100000
-AD_BATT   = 3.550000
+FULL_BATT = 4.079956
+AD_BATT   = 3.487976
 
 pct_full_only=False
 
 
 def calcBatteryPercent(bv):
 
-    truncVal = float('%.f' % float(bv/FULL_BATT*100.0))
+    available_region=(FULL_BATT-AD_BATT)
+    range_pos=(bv-AD_BATT)
+    truncVal = float('%.f' % float(range_pos/available_region*100.0))
 
     # show the battery voltage
     print("Current battery voltage: %s" % bv)
