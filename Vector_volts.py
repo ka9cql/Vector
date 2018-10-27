@@ -24,18 +24,17 @@ import sys
 #import asyncio
 #import time
 
-# NOTE: THE FOLLOWING WAS DEVELOPED DURING TESTING WITH COZMO, NOT VECTOR -
 # On Charger -  (Anything greater than 4.40)
 # 100% full -   Current battery voltage: 4.0799560546875
-# 75% full -    Current battery voltage: 3.85595703125
-# 50% full -    Current battery voltage: 3.72796630859375
-# 25% full -    Current battery voltage: 3.62799072265625
-# ALMOST DEAD - Current battery voltage: 3.48797607421875
-# DEAD -        Current battery voltage: 3.43194580078125
+# 75% full -    Current battery voltage: ??
+# 50% full -    Current battery voltage: ??
+# 25% full -    Current battery voltage: ??
+# ALMOST DEAD - Current battery voltage: 3.602064609527588
+# DEAD -        Current battery voltage: ??
 
 # Presumed "linear" region -
 FULL_BATT = 4.079956
-AD_BATT   = 3.487976
+AD_BATT   = 3.602065
 
 pct_full_only=False
 
