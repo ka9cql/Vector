@@ -24,13 +24,12 @@ import sys
 #import asyncio
 #import time
 
-# On Charger -  (Anything greater than 4.40)
-# 100% full -   Current battery voltage: 4.0799560546875
-# 75% full -    Current battery voltage: ??
-# 50% full -    Current battery voltage: ??
-# 25% full -    Current battery voltage: ??
-# ALMOST DEAD - Current battery voltage: 3.602064609527588
-# DEAD -        Current battery voltage: ??
+# 100% full -   Battery voltage: (4.079956 - 4.032776)
+# 75% full -    Battery voltage: ??
+# 50% full -    Battery voltage: ??
+# 25% full -    Battery voltage: ??
+# ALMOST DEAD - Battery voltage: (3.602064609527588 - 3.6050970554351807)
+# DEAD -        Battery voltage: 
 
 # Presumed "linear" region -
 FULL_BATT = 4.079956
@@ -72,9 +71,8 @@ def main():
             sayThis += "{0}".format(pct)
             sayThis += " percent full"
 
-            
-            print("Saying '%s'" % sayThis)
-            robot.say_text(sayThis)
+            print("\n\n\tSaying '%s'\n\n" % sayThis)
+            #robot.say_text(sayThis)
 
 
 if __name__ == "__main__":
