@@ -72,7 +72,7 @@ def main():
             sayThis += " percent full"
 
             print("\n\n\tSaying '%s'\n\n" % sayThis)
-            #robot.say_text(sayThis)
+            robot.say_text(sayThis)
 
 
 if __name__ == "__main__":
